@@ -14,6 +14,7 @@ const handleFileUpload = event => {
     .then(response => {
       response.json();
     })
+    
     .then(data => {
       console.log(data.path);
     })
