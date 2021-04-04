@@ -1,6 +1,5 @@
 // Creating a Cookie
 // https://sabe.io/classes/javascript/cookies
-
 <!DOCTYPE html>
     <html>
         <head>
@@ -81,3 +80,4 @@ function createCookie(key, value, date) {
 
  function deleteCookie(name) {
     createCookie(name, "", -1);
+ }

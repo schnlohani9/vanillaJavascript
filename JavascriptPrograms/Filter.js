@@ -3,6 +3,8 @@
 
 var a = [2, 4, 6, 7, 8, 9, 9];
 
-a.filter(m => {
-  return m > 8;
-});
+// a.filter(m => {
+//   return m > 8;
+// });
+
+console.log(a.filter(e=>{return e>4}));
