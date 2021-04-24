@@ -5,3 +5,14 @@ Array.prototype.eachAlbum = function(callback) {
       callback(this[i], i, this) // currentValue, index, array
     }
   }
+
+  // for each value returns the value in iterator form
+  // Ex:
+  // [1,2,3].forEach((element) => {
+  // console.log(element);
+  // });
+
+  // Output:
+  // 1
+  // 2
+  // 3

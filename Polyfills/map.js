@@ -9,3 +9,23 @@ Array.prototype.ourMap = function(callback) {
 
 //   Polyfills list
 //   https://reeversedev.com/polyfill-for-foreach-map-filter-reduce
+
+
+// #############################
+// #############################
+// Arguments for map function
+// #############################
+// #############################
+// callback
+// Function that is called for every element of arr. Each time callback executes, the returned value is added to newArray.
+
+// The callback function accepts the following arguments:
+
+// currentValue
+// The current element being processed in the array.
+// indexOptional
+// The index of the current element being processed in the array.
+// arrayOptional
+// The array map was called upon.
+// thisArgOptional
+// Value to use as this when executing callback.
