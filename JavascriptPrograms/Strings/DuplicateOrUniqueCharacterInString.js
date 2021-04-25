@@ -1,3 +1,5 @@
+// Write a JavaScript function to remove duplicate characters from a string.
+// OR
 // Write a JavaScript function to extract unique characters from a string.
 
 // Example string : "thequickbrownfoxjumpsoverthelazydog"
