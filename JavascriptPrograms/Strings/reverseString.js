@@ -11,11 +11,13 @@
 // revString("Greetings")
 
 
-// Solution 2 using the string
+// Reverse single string
 (function(str){
     let reversed = '';
     for(let character of str){
         reversed = character + reversed;
     }
     console.log({reversedString: reversed})
-})("Greetings")
+})("My Name Is Sachin")
+
+// Reverse string "My Name Is Sachin" with "yM emaN sI nihcaS"

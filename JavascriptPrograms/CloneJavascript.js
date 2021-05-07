@@ -1,0 +1,1 @@
+// write a function in javascript to clone any object

@@ -1,11 +1,6 @@
-var hero = {
-    _name: 'John Doe',
-    getSecretIdentity: function (){
-        return this._name;
-    }
-};
+'use Strict'
 
-var stoleSecretIdentity = hero.getSecretIdentity;
+function test(){
 
-console.log(stoleSecretIdentity());
-console.log(hero.getSecretIdentity());
+}
+console.log(test())
