@@ -21,5 +21,5 @@ let hashTwoSum = (array, sum) => {
     return nums
 }
 
-let array = [2, 3, 4, 3, 6, 7]
-console.log(JSON.stringify(hashTwoSum(array, 6)));
+let array = [1,2,-1,-2,3]
+console.log(JSON.stringify(hashTwoSum(array, 0)));

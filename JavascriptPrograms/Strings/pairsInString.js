@@ -9,4 +9,4 @@ function reshape(n,str){
 }
 
 // reshape(2,"1 23 456")
-console.log(reshape(3,"abc de fghij"));
+console.log(reshape(2,"abc de fghij"));

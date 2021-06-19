@@ -6,4 +6,4 @@ function spinWords(string){
     )
   }
 
-  console.log(spinWords('Hey fellow warriors'));
+console.log(spinWords('Hey fellow warriors'));

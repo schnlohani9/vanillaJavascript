@@ -1,0 +1,27 @@
+*{box-sizing: border-box;}
+
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background:wheat;
+	font-size : 3em;
+}
+
+.nav-link {
+	color: red;
+}
+
+/* .nav-link{
+/* 	.vowel{ */
+		/* color: red;
+		display: inline-block;
+		opacity: 0;
+		transition: all .125 ease-in-out; */
+/* 	}
+	&:hover .vowel{
+		opacity: 1;
+	} */
+/* } */

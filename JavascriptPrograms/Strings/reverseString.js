@@ -20,4 +20,12 @@
     console.log({reversedString: reversed})
 })("My Name Is Sachin")
 
+
 // Reverse string "My Name Is Sachin" with "yM emaN sI nihcaS"
+function spinWords(string){
+    return string.replace(/\w{1,}/g, 
+      function(w) {return w.split('').reverse().join('')}
+    )
+  }
+
+console.log(spinWords('My Name Is Sachin'));
