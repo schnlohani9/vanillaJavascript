@@ -17,9 +17,17 @@
 
 // Solution using the n number of arguments
 function fixCurry(fn, totalArgs) {
+    let result = 0;
     totalArgs = totalArgs || fn.length
     return function recursor() {
-        return arguments.length < totalArgs ? recursor.bind(this, ...arguments) : fn.call(this, ...arguments);
+        if (arguments.length < totalArgs) {
+            result = recursor.bind(this, ...arguments);
+            console.log("Inside if loop", result);
+        } else {
+            result = fn.call(this, ...arguments);
+            console.log("Inside else loop", result);
+        }
+        return result;
     }
 }
 
