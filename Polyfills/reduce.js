@@ -1,20 +1,20 @@
 // Ployfills for reduce functions
-Array.prototype.myreducer = function(callback, initialValue) {
-    var accumulator = initialValue === undefined ? undefined : initialValue
-  
-    for (var i = 0; i < this.length; i++) {
-      if (accumulator !== undefined) {
-        accumulator = callback.call(undefined, accumulator, this[i], i, this)
-      } else {
-        accumulator = this[i]
-      }
+Array.prototype.myreducer = function (callback, initialValue) {
+  var accumulator = initialValue === undefined ? undefined : initialValue
+
+  for (var i = 0; i < this.length; i++) {
+    if (accumulator !== undefined) {
+      accumulator = callback.call(undefined, accumulator, this[i], i, this)
+    } else {
+      accumulator = this[i]
     }
-    return accumulator
   }
+  return accumulator
+}
 
 const array1 = [1, 2, 3, 4];
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
-console.log(array1.myreducer(reducer,5));
+console.log(array1.myreducer(reducer, 5));
 
   // https://reeversedev.com/polyfill-for-foreach-map-filter-reduce
 

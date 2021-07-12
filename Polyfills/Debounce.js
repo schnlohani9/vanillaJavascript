@@ -1,5 +1,5 @@
 // Debounce is a technique in Js by which we control the amount of events happening on the click of the button.
-// For ex: When ordering item on amazon you reach to payment option and you click 5 times on the payment button. So to prevents the payment from happening the 5 times we will use debounce technique and event will fire only once
+// For ex: When ordering item on amazon you reach to payment option and you click 5 times on the payment button. So to prevents the payment from happening the 5 times we will use debounce technique and event will fire only once.
 
 const debounce = (fn, delay) => {
     let timeoutID;

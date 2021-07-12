@@ -9,11 +9,11 @@
 let hashTwoSum = (array, sum) => {
     let storageHash = {}
     let nums = []
-    
-    for(let i in array){
-      let addend = sum - array[i]
-        
-        if (addend in storageHash){
+
+    for (let i in array) {
+        let addend = sum - array[i]
+
+        if (addend in storageHash) {
             nums.push([addend, array[i]])
         }
         storageHash[array[i]] = i
@@ -21,5 +21,5 @@ let hashTwoSum = (array, sum) => {
     return nums
 }
 
-let array = [1,2,-1,-2,3]
+let array = [1, 2, -1, -2, 3]
 console.log(JSON.stringify(hashTwoSum(array, 0)));
