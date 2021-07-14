@@ -5,16 +5,18 @@
 // React 6
 // --------------
 
+// https://medium.com/tech-tajawal/javascript-this-4-rules-7354abdb274c
 var obj = {
     val: 1
 };
 
 obj.__proto__.inc = function () {
+  console.log(this);
     return this.val++;
 }
 
 obj.__proto__.dec = () => {
-    connsole.log(this);  // {}  
+    console.log(this);  // {}  
     return this.val--;
 }
 

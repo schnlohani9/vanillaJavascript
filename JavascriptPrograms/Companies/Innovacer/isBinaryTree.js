@@ -3,7 +3,7 @@
 //        2
 //      3
 
-
+// 
 function TreeNode(value, left, right) {
     this.value = value || null;
     this.left = left || null;
@@ -16,12 +16,8 @@ function getTreeNode(head, value) {
     if(head === null || head.value === value) {
         return head;
     }
-
     return  getTreeNode(head.left, value) || getTreeNode(head.right, value) || null;
 }
-
-
-
 
 const inputItemToTreeNode = (root, item) =>  {
     const [value, next] = item.match(/\d+/g);
@@ -59,35 +55,39 @@ function main() {
     const emptyInput = [];
 
     try {
-        validateBinaryTree(validInput);
-        document.getElementById('result').innerText = 'Binary Tree is valid';
+        validateBinaryTree(emptyInput);
+        //document.getElementById('result').innerText = 'Binary Tree is valid';
+        console.log('Binary Tree is valid');
     } catch(e) {
-        document.getElementById('result').innerText = e;
+        console.log(e);
+        // document.getElementById('result').innerText = e;
     }
 
 }
+
+main()
 
 
 // My Solution
-function validateBinaryTree(arr) {
-    let formattedArray = [];
-    for (let elements of arr) {
-        let newArray = elements.replace("(", "").replace(")", "").split(",");
-        for (let elements of newArray) {
-            formattedArray.push(elements)
-        }
-        console.log(formattedArray);
-        if (formattedArray[0] < formattedArray[1]) {
-            if (formattedArray.length === 3) {
-                if (formattedArray[1] < formattedArray[2]) {
-                    return true;
-                }
-            }
-            return true;
-        }
-        return false;
-    }
-}
+// function validateBinaryTree(arr) {
+//     let formattedArray = [];
+//     for (let elements of arr) {
+//         let newArray = elements.replace("(", "").replace(")", "").split(",");
+//         for (let elements of newArray) {
+//             formattedArray.push(elements)
+//         }
+//         console.log(formattedArray);
+//         if (formattedArray[0] < formattedArray[1]) {
+//             if (formattedArray.length === 3) {
+//                 if (formattedArray[1] < formattedArray[2]) {
+//                     return true;
+//                 }
+//             }
+//             return true;
+//         }
+//         return false;
+//     }
+// }
 
-let arr = ["(2,1)", "(3,2)"];
-console.log(validateBinaryTree(arr));
+// let arr = ["(2,1)", "(3,2)"];
+// console.log(validateBinaryTree(arr));

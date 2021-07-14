@@ -17,7 +17,6 @@
                 makeResolver,
                 fulfil,
                 reject,
-
                 promise;
 
             makeResolver = function (newState) {

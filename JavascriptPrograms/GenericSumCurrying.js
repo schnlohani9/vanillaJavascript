@@ -8,19 +8,28 @@
 function fixCurry(func) {
     return function curried(...args) {
         if (args.length >= func.length) {
-            return func.apply(this, args);
+            return func.apply(null, args);
         } else {
             return function (...args2) {
-                return curried.apply(this, args.concat(args2));
+                return curried.apply(null, args.concat(args2));
             }
         }
     };
 }
 
+function multiply(x, y, z) {
+    return x * y;
+  }
+
+
+  const curried = curryWrapper(multiply);
+  console.log(curried);
+  console.log(curried(1)(2)(3));
+
 // The currying requires the function to have a fixed number of arguments.
 // A function that uses rest parameters, such as f(...args), can’t be curried this way.
-var sum = fixCurry((a, b, c, d) => a + b + c + d);
-console.log(sum(1, 2, 3));
+// var sum = fixCurry((a, b, c, d) => a + b + c + d);
+// console.log(sum(1, 2, 3));
 // console.log(sum(1, 2)(3, 4));
 // console.log(sum(1)(2)(3)(4));
 
@@ -40,21 +49,21 @@ console.log(sum(1, 2, 3));
 
 
 // Solution using the n number of arguments
-// function fixCurry(fn, totalArgs) {
-//     let result = 0;
-//     // fn.length ---> The length property indicates the number of parameters expected by the function.
-//     totalArgs = totalArgs || fn.length
-//     return recursor = () => {
-//         // arguments is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.    
-//         // Here in line 38 we are passing 7 values so arguments.length is 7
-//         if (arguments.length < totalArgs) {
-//             result = recursor.bind(this, ...arguments);
-//             console.log("VALUE OF THIS HERE IS", this);
-//             console.log("Inside if loop result is", result);
-//         } else {
-//             result = fn.call(this, ...arguments);
-//             console.log("Inside else loop result is", result);
-//         }
-//         return result;
-//     }
-// }
+function fixCurry(fn, totalArgs) {
+    let result = 0;
+    // fn.length ---> The length property indicates the number of parameters expected by the function.
+    totalArgs = totalArgs || fn.length
+    return recursor = () => {
+        // arguments is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.    
+        // Here in line 38 we are passing 7 values so arguments.length is 7
+        if (arguments.length < totalArgs) {
+            result = recursor.bind(this, ...arguments);
+            console.log("VALUE OF THIS HERE IS", this);
+            console.log("Inside if loop result is", result);
+        } else {
+            result = fn.call(this, ...arguments);
+            console.log("Inside else loop result is", result);
+        }
+        return result;
+    }
+}
